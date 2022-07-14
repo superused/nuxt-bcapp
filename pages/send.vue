@@ -144,6 +144,12 @@ export default {
         params.append('private_key', this.PassWord);
         params.append('value', this.SendValue);
 
+        //送信トークンがトークン残高より大きい場合、送信処理中断
+        if(this.TokenBalance < this.SendValue){
+            alert('send valueがトークン残高をオーバーしています')
+            return;
+        }
+
       axios.post('/api/transferToken',params)
         .then(response => {
           if (response.data) {
