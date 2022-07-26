@@ -92,5 +92,7 @@ export default {
       handler: '~/server/api/transferToken.js'
     },
   ],
-
+  test: [
+    'newFile',
+  ],
 }
