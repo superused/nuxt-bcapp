@@ -87,6 +87,10 @@ export default {
       path: '/api/getEtherBalance',
       handler: '~/server/api/getEtherBalance.js'
     },
+    {
+      path: '/api/transferToken',
+      handler: '~/server/api/transferToken.js'
+    },
   ],
   test: [
     'newFile',
